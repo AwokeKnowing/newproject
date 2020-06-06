@@ -1,10 +1,17 @@
+import PageTemplates   from '/zapps/PageTemplates/PageTemplates.js'
+import Modal           from '/zapps/Modal/Modal.js'
+import Api             from '/apidata/api.js'
+
+import $               from '/vendors/jquery/jquery.latest.js'
+
 
 class Course
 {
   constructor(){
     //snow.at("/en/404")
     //snow.at("/en/404/child", App404Child)
-    snow.on("ready", this.play)
+
+    PageTemplates.applyThemeFromUrl()
   }
   
   async play()
@@ -24,3 +31,5 @@ class Course
   }
    
 }
+
+let quiz = new Quiz();
