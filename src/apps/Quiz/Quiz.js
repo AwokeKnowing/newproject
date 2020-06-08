@@ -1,11 +1,7 @@
-import {PageTemplates}   from '/zapps/PageTemplates/PageTemplates.js'
-import {Modal}           from '/zapps/Modal/Modal.js'
-import {AccountData,
-        AccountActions}  from '/apidata/AccountData/AccountData.js'
-import {SiteData
-        SiteActions}     from '/apidata/SiteData/SiteData.js'
-import {UserData, 
-        UserActions}     from '/apidata/UserData/UserData.js'
+import PageTemplates   from '/zapps/PageTemplates/PageTemplates.js'
+import ModalDialog     from '/zapps/ModalDialog/ModalDialog.js'
+import Api             from '/api/Api.js'
+
 
 class Quiz
 {

@@ -1,5 +1,5 @@
 import PageTemplates   from '/zapps/PageTemplates/PageTemplates.js'
-import Modal           from '/zapps/Modal/Modal.js'
+import ModalDialog     from '/zapps/ModalDialog/ModalDialog.js'
 import Api             from '/apidata/api.js'
 
 import $               from '/vendors/jquery/jquery.latest.js'
