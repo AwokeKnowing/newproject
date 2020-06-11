@@ -1,10 +1,10 @@
-class UserData
+class MuiData
 {
-	constructor(api, config)
+    constructor(api, config)
     {
         this.api    = api
         this.config = config
     }
 }
 
-export default UserData;
+export default MuiData;

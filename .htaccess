@@ -1,0 +1,29 @@
+RewriteEngine On
+RewriteBase /
+
+DirectoryIndex index.html /src/apps/Home/index.html
+
+#rewrite these urls to their corresponding app
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^.+/library/[0-9]+/.*/course/.+/.+ /src/apps/Course/index.html [QSA,L] 
+RewriteRule ^.+/library.*    /src/apps/Library/index.html [QSA,L]
+RewriteRule ^.+/search.*     /src/apps/Library/index.html [QSA,L]
+RewriteRule ^.+/signUp.*     /src/apps/SignUp/index.html [QSA,L]
+RewriteRule ^.+/myLearning.* /src/apps/MyLearning/index.html [QSA,L]
+RewriteRule ^.+/tna.*        /src/apps/Tna/index.html [QSA,L]
+RewriteRule ^.+/login.*      /src/apps/Login/index.html [QSA,L]
+RewriteRule ^.+/error.*      /src/apps/Error/index.html [QSA,L]
+
+#rewrite everything else home
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} ^.+/(faq|contactUs|certification|aboutPortal|features|benefits|requestAccess) 
+RewriteRule .* /src/apps/Home/index.html [QSA,L]
+
+
+
+#instead of 404 just go home (though eg ajax requests for missing files will show as html response)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule .* /src/apps/Home/index.html [QSA,END]

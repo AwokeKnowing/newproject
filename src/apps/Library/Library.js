@@ -4,9 +4,7 @@
 class Library
 {
   constructor(){
-    //snow.at("/en/404")
-    //snow.at("/en/404/child", App404Child)
-    snow.on("ready", this.play)
+
   }
   
   async play()

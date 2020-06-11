@@ -1,21 +1,19 @@
-var UserData = {
-  "version":1,
-  get Profile() {
-    return new Promise((resolve, reject)=>
+class AccountData
+{
+	constructor(api, config)
     {
-      resolve({"hi":1});
-    });
-  },
-  set Profile(value) {
-    //this._profile = value;
-  },
-  get File() {
-    return new Promise((resolve, reject)=>
-    {
-      resolve({"hi":1});
-    });
-  },
-  set File(value) {
-    //this._profile = value;
-  }
-};
+        this.api    = api
+        this.config = config
+    }
+
+	async get Settings()
+	{
+		return new Promise((resolve, reject)=>
+	    {
+	      	resolve({"hi":1});
+	    });
+	}
+
+}
+
+export default AccountData;

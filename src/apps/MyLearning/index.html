@@ -1,23 +1,12 @@
 <!DOCTYPE html>
 <html>
     <head>
-    	<base href="https://www.knowledgecity.com/">
+        <title>KnowledgeCity</title>
     </head>
     <body>
-    	<script src="preload.js"></script>
-
-        <script defer src="cdn/snow/v1/snow.js"></script>
-
-        <script defer src="zapps/Analytics.js"></script>
-        <script defer src="zapps/PageTemplates.js"></script>
-        <script defer src="zapps/LMSChat.js"></script>
-
-        <script defer src="apps/MyLearning.js"></script>
-
-        <script>
-        	document.addEventListener("DOMContentLoaded", () => 
-    			snow.fall(location.pathname)
-    		);
-    	</script>
+        <script src="/preload.js"></script>
+        <script src="/config.js"></script>
+        <script src="/override.config.js"></script>
+        <script type="module" src="/src/apps/MyLearning.js"></script>
     </body>
 </html>
