@@ -16,7 +16,7 @@ RewriteRule ^.+/tna.*        /src/apps/Tna/index.html [QSA,L]
 RewriteRule ^.+/login.*      /src/apps/Login/index.html [QSA,L]
 RewriteRule ^.+/error.*      /src/apps/Error/index.html [QSA,L]
 
-#rewrite everything else home
+#home handles a bunch of basic vistor pages
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !(.js|.css|.jpg|.png|.html)$
@@ -24,7 +24,7 @@ RewriteCond %{REQUEST_URI} ^.+/(faq|contactUs|certification|aboutPortal|features
 RewriteRule .* /src/apps/Home/index.html [QSA,L]
 
 
-#instead of 404 just go home (though eg ajax requests for missing files will show as html response)
+#instead of 404 for other broken links just go home 
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !(.js|.css|.jpg|.png|.html)$
